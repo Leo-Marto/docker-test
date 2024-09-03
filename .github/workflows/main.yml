@@ -1,0 +1,13 @@
+name: Run script
+on:
+  push: 
+    branches: main
+
+jobs:
+   run-script:
+     runs-on: ubuntu-latest
+     steps:
+        - name: Checkout repo
+          uses: actions/checkout@v2
+        - name: ejecuta script
+          run: ./test.sh
